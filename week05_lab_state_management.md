@@ -749,6 +749,9 @@ class HomePage extends ConsumerWidget {
 ทำโจทย์ที่ 1 และ 2 ซ้ำอีกครั้งในโปรเจกต์ทดลอง Riverpod (ส่วนที่ 4) 
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอฟีเจอร์ค้นหาที่กรองสินค้าได้ถูกต้อง และภาพ Dialog ยืนยันการล้างรายการโปรด เขียนอธิบายเหตุผลการเลือกชนิด State ของทั้งสองฟีเจอร์ ในช่องด้านล่าง
+<img width="725" height="587" alt="image" src="https://github.com/user-attachments/assets/48b215f6-14b9-4e57-b8a3-62ed79627cd3" />
+<img width="725" height="587" alt="image" src="https://github.com/user-attachments/assets/cc9f2320-6235-4c80-9206-d4028e5ae092" />
+
 ```text
 โจทย์ที่ 1 ใช้ Ephemeral State และ `setState` เพราะคำค้นหามีขอบเขตเฉพาะ HomePage ส่วนโจทย์ที่ 2 ใช้ App State เดิมคือ `FavoritesModel` เพราะรายการโปรดถูกใช้ร่วมกันระหว่าง HomePage และ FavoritesPage ปุ่มล้างรายการจึงเรียก `context.read<FavoritesModel>().clear()` หลังผู้ใช้ยืนยัน และใช้ `context.watch<FavoritesModel>()` ใน `build` เพื่อซ่อนหรือแสดงปุ่มตามจำนวนรายการ รวมทั้งอัปเดตหน้าจอหลังล้างข้อมูล
 ```
